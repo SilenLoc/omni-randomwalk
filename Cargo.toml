@@ -1,0 +1,16 @@
+[package]
+name = "omnis-vanitas-web"
+version = "0.0.0"
+edition = "2021"
+description = "omnis-vanitas-web"
+license = "Apache-2.0"
+keywords = ["frontend"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+egui = "0.20.1"
+# You only need serde if you want app persistence:
+serde = { version = "1", features = ["derive"] }
+rand = "0.8.5"
+getrandom = { version = "0.2", features = ["js"] }
