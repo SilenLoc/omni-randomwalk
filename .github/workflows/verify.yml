@@ -9,7 +9,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: Swatinem/rust-cache@v2  
-
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          components: clippy, rustfmt
       - uses: taiki-e/install-action@cargo-binstall
       - run: cargo binstall --no-confirm --force just
       - run: just check-all
